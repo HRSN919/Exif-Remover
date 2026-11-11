@@ -11,7 +11,7 @@
     "clean": "rm -rf dist server.js dist_electron",
     "lint": "tsc --noEmit",
     "electron:start": "electron .",
-    "electron:build": "vite build && electron-builder --win"
+    "electron:build": "vite build && electron-builder --win --x64"
   },
   "build": {
     "appId": "com.byhrsn.exifcleaner",
@@ -20,16 +20,33 @@
     "directories": {
       "output": "dist_electron"
     },
+    "asar": true,
     "win": {
-      "target": ["nsis", "portable"],
-      "icon": "public/favicon.ico"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
     },
     "nsis": {
       "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "ByHRSN Exif Cleaner"
+      "shortcutName": "ByHRSN Exif Cleaner",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
     }
   },
   "dependencies": {

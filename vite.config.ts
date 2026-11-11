@@ -5,6 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // Required for Electron's file:// renderer so built assets resolve locally.
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

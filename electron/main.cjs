@@ -22,7 +22,6 @@ function createWindow() {
     show: false,
     autoHideMenuBar: true,
     title: 'ByHRSN Exif Cleaner v2.5 - Windows Privacy App',
-    icon: path.join(__dirname, '../public/favicon.ico'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
