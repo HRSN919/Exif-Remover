@@ -1,0 +1,6 @@
+{
+  "name": "ByHRSN Exif Cleaner v2.5 - Windows Privacy App",
+  "description": "نرم‌افزار نسخه ۲.۵ تحت ویندوز پاکسازی اگزیف، متادیتا و موقعیت مکانی تصاویر متعلق به byhrsn.com با پشتیبانی از پردازش گروهی و پیش‌نمایش بلادرنگ",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
